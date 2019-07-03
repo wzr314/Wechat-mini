@@ -1,7 +1,13 @@
 <map
+ id="myMap"
  longitude="{{log}}"
  latitude="{{lat}}"
  controls="{{controls}}"
+ show-location="ture"
+ scale="18"
+ bindcontroltap="controltap"
+ markers="{{markers}}"
+ bindregionchange="reginChange"
  style='width:100%;height:100%'  >
 
 </map>
