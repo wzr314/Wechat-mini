@@ -19,21 +19,33 @@ Page({
         })
       },
     })
-    that.setData({
-      controls:[
-        {
-          id:1,
-          iconPath:'/imgs/btn_scan.png',
-          position:{
-            height:100,
-            width:250,
-            top:400,
-            left:30
-          }
 
-        }
-      ]
+
+    wx.getSystemInfo({
+      success: function (res) {
+        var window_width = res.windowWidth;
+        var window_height = res.windowHeight;
+
+        
+        that.setData({
+          controls: [
+            {
+              id: 1,
+              //img background
+              iconPath: '/imgs/btn_scan.png',
+              position: {
+                height: 100,
+                width: 200,
+                top: window_height - 80,
+                left: window_width/2 - 100
+              }
+            },
+          ]
+        })
+
+      },
     })
+
 
 
   }
